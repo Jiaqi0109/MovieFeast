@@ -20,6 +20,6 @@ from apps.Home.views import home
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^$', include('apps.Home.urls', namespace='home'))
-    url(r'^$', home, name='home')
+    url(r'^$', home, name='home'),
+    url(r'^home/', include('apps.Home.urls', namespace='home')),
 ]
